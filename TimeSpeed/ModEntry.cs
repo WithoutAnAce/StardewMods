@@ -237,6 +237,10 @@ internal class ModEntry : Mod
         // check restrictions for input
         if (forInput)
         {
+            // don't handle input if using multiplayer time scaling
+            if (this.Config.UseMultiplayerTimeScaling)
+                return false;
+
             // don't handle input when player isn't free (except in events)
             if (!Context.IsPlayerFree && !Game1.eventUp)
                 return false;

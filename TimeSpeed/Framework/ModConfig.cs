@@ -18,6 +18,9 @@ internal class ModConfig
     /// <summary>The time speed for in-game locations, measured in seconds per in-game minute.</summary>
     public ModSecondsPerMinuteConfig SecondsPerMinute { get; set; } = new();
 
+    /// <summary>Whether to block manual input and instead determine time flow from each player's state</summary>
+    public bool UseMultiplayerTimeScaling = false;
+
     /// <summary>The mod configuration for where time should be frozen.</summary>
     public ModFreezeTimeConfig FreezeTime { get; set; } = new();
 
